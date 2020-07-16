@@ -1,0 +1,352 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body {margin: 0;
+    font-style: normal;
+}
+
+a {text-decoration:none;color: black;}
+h3 {font-size: 2rem;}
+
+/* 헤더 */
+.headlist{
+    background-color: #313955;
+    transition: all 1s;
+}
+.headlist_white{
+    background-color: #fff !important;
+}
+
+.logo {
+    float: left;
+    text-indent:-99999px;
+    background-image: url(../img/img-kabang-200417.png);
+    width: 120px;
+    height: 30px;
+    background-position: 0px 0px;
+    margin : 30px 0 0 0;
+}
+
+.logo_black{
+    background-position: 0px -25px;
+}
+
+nav .menu > .menuitem > a{
+    color: #fff;
+    transition: all 1s;
+}
+
+nav .menu > .menuitem .btn_submit{
+    color: #000;
+}
+
+nav .menu .menuitem:hover{
+    border-bottom: 2px solid #fff;
+}
+
+
+nav .menu .menuitem.underline{
+    border-bottom: 2px solid #fff;
+}
+
+.titlle_item{
+    color: #fff;
+}
+.blk_underline{
+    border-bottom: 2px solid #000 !important;
+}
+.blk_bd:hover{
+    border-bottom: 2px solid #000 !important;
+}
+
+/* ---헤더 */
+
+#contanier{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.main_title_cont{
+    text-align: center;
+    margin: 150px 0 100px;
+    font-family: '돋움';
+}
+
+.main_title_cont h3{
+    line-height: 51px;
+    font-size:2.4rem;
+    font-weight: 200;
+
+}
+
+.main_title_cont p {
+    margin-top: 30px;
+    font-size: 0.95rem;
+    line-height: 26px;
+}
+
+/*빅배너*/
+
+.big_banner_cont{
+    width: 100%;
+    overflow: hidden;
+    min-width: 1200px;
+}
+
+.banner_wrap{
+    width: 110%;
+    overflow: hidden;
+    position: relative;
+    height: 460px;
+}
+
+.banner_img_wrap{
+    width: 100%;
+    height: 460px;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+}
+
+.banner_img_wrap img{
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+    transition-property: right, opacity;
+    transition-duration: .5s;
+    width: 110%;
+    right: -100px;
+    top: -113%;
+}
+
+.banner_img_wrap.on img{
+    opacity: 1;
+    right: 0;
+    overflow-x: hidden;
+} 
+
+
+/*빅배너*/
+
+
+.history_cont{
+    width: 740px;
+    margin: 0 auto;
+}
+
+.history_ymc_wrap{
+    margin-top: 30px;
+}
+.year {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.7rem;
+    position : relative;
+    top: -10px;
+    font-weight: bold;
+
+}
+
+.month_txt_wrap{
+    display: inline-block;
+    margin-left: 30px;
+
+}
+
+.month_txt_wrap p{
+    margin-bottom: 20px;
+}
+
+.month {
+    margin-right: 30px;
+
+}
+
+.history_ymc_wrap:last-child{
+    margin-bottom: 30px;
+}
+
+/*브랜드 영상*/
+.brand_video_cont{
+    background-color: #fafafa;
+    padding-top:100px;
+}
+
+.brand_video_cont h3, .bi_intro_cont h3{
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    height: 100px;
+}
+
+.brand_video_cont h3:after, .bi_intro_cont h3::after{
+    position: absolute;
+    height: 1px;
+    width: 80px;
+    content: '';
+    display: block;
+    background-color: black;
+    left: 50%;
+    margin-left: -40px;
+    bottom: 0;
+}
+
+
+/* 비디오 슬라이드 & slick 재정의 */
+.slide_video_wrap{
+    height: 480px;
+    margin-top: 70px;
+}
+.slick-initialized .slick-slide{
+    padding:0 5px; /*슬라이드이밎간 간격*/
+}
+.slide_div {
+    width: 960px;
+    margin: 0 auto;
+}
+.slick-prev, .slick-next{
+    width: 40px;
+    height: 48px;
+    top:90px;
+}
+
+.slick-prev{
+    left : -70px;
+}
+
+.slick-next{
+    right : -50px;
+}
+
+.slick-prev:before{
+    content:'';
+    background: url(../img/btn-arrow-l.png);
+    display: block;
+    width: 40px;
+    height: 48px;
+    background-size: contain;
+}
+
+.slick-next:before{
+    content:'';
+    background: url(../img/btn-arrow-r.png);
+    display: block;
+    width: 40px;
+    height: 48px;
+    background-size: contain;
+}
+
+.slick-dots{
+    bottom:-95px;
+}
+
+.slide_item{
+    position: relative;
+}
+.slide_item img{
+    width: 100%;
+}
+
+.slide_item h4{
+    font-size: 1.2rem;
+    padding: 20px 0;
+}
+
+.slide_item p{
+    font-size: 0.8rem;
+    color: #888;
+    line-height: 1.3rem;
+}
+
+.slide_item .video_title{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-weight: 100;
+    font-size: 0.7rem;
+}
+
+.slide_item .play_img{
+    position: absolute;
+    background: url(../img/img-kabang-200417.png) no-repeat;
+    background-position: -178px -90px;
+    background-size: 215px 190px;
+    left: 45%;
+    width: 30px;
+    height: 40px;
+    top: 25%;
+}
+
+.videoPlayBtn{
+    width: 310px;
+    height: 178.3px;
+    display: inline-block;
+    z-index: 0;
+}
+
+
+.video_div{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 310px;
+    height: 178.3px;
+}
+
+/* BI */
+.bi_intro_cont{
+    padding-top:100px;
+
+}
+.bi_wrap{
+    margin: 0 auto;
+    width: 460px;
+
+}
+.bi_wrap img{
+    width: 100%;
+}
+
+.bi_add_txt_wrap{
+    text-align: center;
+    padding-bottom:70px;
+    border-bottom: 1px solid #e1e1e1;
+    width: 1080px;
+    margin: 0 auto;
+}
+
+.bi_add_txt_wrap .emph{
+    font-size : 1.5rem;
+    margin-bottom: 10px;
+}
+
+.bi_add_txt_wrap .normal{
+    font-size : 0.8rem;
+    font-weight: lighter;
+}
+
+.bi_download_wrap{
+    text-align: center;
+    padding: 40px 0 80px;
+}
+
+.bi_download_wrap ul{
+    display: inline-block;
+
+}
+
+.bi_download_wrap li{
+    display: inline-block;
+    margin: 20px;
+}
+
+.bi_download_wrap a{
+    width: 100%;
+    padding: 20px 60px;
+    display: block;
+    background-color: #fafafa;
+    border: 1px solid #dcdcdc;
+}

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eyescream</title>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="script/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css"/>
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+
+    <!--//공통-->
+    <script src="script/jquery-3.5.1.min.js"></script>
+    <script src="script/slick.js"></script>
+    <script src="https://kit.fontawesome.com/e545ec33c1.js" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function(){
+              
+            $(window).scroll(function () {
+                var height = $(document).scrollTop();
+                if(height > 0){
+                    $('header').addClass('on');
+                }else{
+                    $('header').removeClass('on');
+                }
+            }); 
+
+
+              $(".btn_gallery_item").click(function(){
+                  var bgStr = $(this).parent('.gallery_item').css("background-image");
+                  var bgUrl = bgStr.substring(5,bgStr.length-2);
+
+                    var layerPop = "<div class='img_layer'>";
+                        layerPop += "<span class='bg_black_layer'></span>";
+                        layerPop += "<div class='img_area'>";
+                        layerPop += "<a id='close' href='#' onclick='return false'>";
+                        layerPop += "<span class='close'></span>";
+                        layerPop += "</a>";
+                        layerPop += "<img src='"+bgUrl+"'</div>";
+                        layerPop += "</div>";
+
+                    $(".gallery").append(layerPop);
+
+                    $("#close").on("click", function(){
+                        $(".img_layer").remove();
+                    });
+
+              });
+
+
+
+            $('#big_banner_slide').slick({
+				slide: 'div',
+				slidesToShow : 1,
+				slidesToScroll : 1,	//슬라이드 되어질 슬라이드수 기본값은 1
+                speed : 500,	
+                arrows : true,
+                infinite : true, 	//무한 반복 옵션	 
+                draggable : false, 	//드래그 가능 여부 
+                autoplay : false,			// 자동 스크롤 사용 여부
+				autoplaySpeed : 1500, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+                pauseOnHover : false,		// 슬라이드 이동	시 마우스 호버하면 슬라이더 멈추게 설정
+            });  
+ 
+            $('#pickup_slide').slick({
+				slide: 'div',
+				slidesToShow : 3,
+				slidesToScroll : 1,	//슬라이드 되어질 슬라이드수 기본값은 1
+                speed : 1000,	
+                arrows : true,
+                infinite : true, 	//무한 반복
+                centerMode: true, 
+                centerPadding: '16%',
+                dots:true,
+                responsive: [
+                {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+                }
+            ]
+            });  
+  
+            $(".input_search").focus(function(){
+                $(".search_icon").css("opacity",".5");
+            });
+
+            $(".input_search").focusout(function(){
+                $(".search_icon").css("opacity","1");
+            });
+
+            $("#menu_btn").click(function(){
+               $("#menuBox").addClass("on");
+            });
+
+            $("#btnMenuClose").click(function(){
+                $("#menuBox").removeClass("on");
+            })
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+
+    <header>
+        <h1 class="logo">
+            <a href="#">
+                <span class="blind">로고</span>
+            </a>
+        </h1>
+
+        <h2 class="blind">전체메뉴></h2>
+            <a href="#" class="menu_btn" id="menu_btn">
+                <div class="hr_wrap">
+                    <span id="hr_part1"></span>
+                    <span id="hr_part2"></span>
+                    <span id="hr_part3"></span>
+                </div>
+            </a>
+
+        <div class="menu" id="menuBox">
+            <div class="menu_wrap">
+                <a href="#" id="btnMenuClose"><span class="menu_close"></span></a>
+                <h1 class="menu_logo"></h1>
+
+                <div class="search_wrap">
+                    <span class="search_icon"></span>
+                    <input type="textbox" class="input_search">
+                </div>
+
+                <ul class="menu_list">
+                    <li>FEATURE</li>
+                    <li>PICKUP</li>
+                    <li>SNAP</li>
+                    <li class="mt10">FASHION</li>
+                    <li>MUSIC</li>
+                    <li>ART</li>
+                    <li>CULTURE</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+         <div class="big_banner">
+            <div id="big_banner_slide" class="slide_div">
+                <div class="slide_item img_area1"></div>
+                <div class="slide_item img_area2"></div>
+                <div class="slide_item img_area3"></div>
+                <div class="slide_item img_area4"></div>
+                <div class="slide_item img_area5"></div>
+
+            </div>
+        </div>
+ 
+        <div class="sns">
+            <a href="#" class="ico ico_instgram"></a>
+            <a href="#" class="ico ico_twit"></a>
+            <a href="#" class="ico ico_facebook"></a>
+        </div>
+
+        <div class="pickup">
+            <h3>PICK UP</h3>
+            <div id="pickup_slide" class="pickup_slide_div">
+                <div class="pickup_slide_item">
+                        <div class="pickup_img1 pickup_img"></div>
+                        <div class="pickup_slide_num">
+                            <span class="big">01</span><span class="small">/06</span>
+                        </div>
+                </div>
+                <div class="pickup_slide_item">
+                        <div class="pickup_img2 pickup_img"></div>
+                        <div class="pickup_slide_num">
+                            <span class="big">02</span><span class="small">/06</span>
+                        </div>
+                </div>
+                <div class="pickup_slide_item">
+                        <div class="pickup_img3 pickup_img"></div>
+                        <div class="pickup_slide_num">
+                            <span class="big">03</span><span class="small">/06</span>
+                        </div>
+                </div>
+                <div class="pickup_slide_item">
+                        <div class="pickup_img4 pickup_img"></div>
+                        <div class="pickup_slide_num">
+                            <span class="big">04</span><span class="small">/06</span>
+                        </div>
+                </div>
+                <div class="pickup_slide_item">
+                        <div class="pickup_img5 pickup_img"></div>
+                        <div class="pickup_slide_num">
+                            <span class="big">05</span><span class="small">/06</span>
+                        </div>
+                </div>
+                <div class="pickup_slide_item">
+                        <div class="pickup_img6 pickup_img"></div>
+                        <div class="pickup_slide_num">
+                            <span class="big">06</span><span class="small">/06</span>
+                        </div>
+                </div>
+            </div> 
+        </div><!--//pickup-->
+
+        <div class="newarrivals">
+            <h3>NEW ARRIVALS</h3>
+            <div class="gallery">
+                <div class="gallery_item img_1">
+                    <a href="javascript:;" class="btn_gallery_item">
+                        <div class="item_caption">
+                            <div class="item_head">
+                                <div class="category">
+                                    MUSIC
+                                </div>
+                                <div class="new">
+                                </div>
+                            </div>
+                            <div class="title">
+                                집으로 가는 버스 안, 지친 마음 편히 만들어 줄 음악
+                            </div>
+                            <div class="date">
+                                2020.06.11
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item img_2">
+                    <a href="javascript:;" class="btn_gallery_item">
+                        <div class="item_caption trsprnt">
+                            <div class="item_head">
+                                <div class="category">
+                                    MUSIC
+                                </div>
+                                <div class="new">
+                                </div>
+                            </div>
+                            <div class="title">
+                                Greatest Hits
+                            </div>
+                            <div class="date">
+                                2020.06.11
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item img_3">
+                    <a href="javascript:;" class="btn_gallery_item">
+                        <div class="item_caption trsprnt">
+                            <div class="item_head">
+                                <div class="category">
+                                    MUSIC
+                                </div>
+                                <div class="new">
+                                </div>
+                            </div>
+                            <div class="title">
+                                Bearhead
+                            </div>
+                            <div class="date">
+                                2020.06.11
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item img_4">
+                    <a href="javascript:;" class="btn_gallery_item">
+                        <div class="item_caption trsprnt">
+                            <div class="item_head">
+                                <div class="category">
+                                    MUSIC
+                                </div>
+                                <div class="new">
+                                </div>
+                            </div>
+                            <div class="title">
+                                Penthouse
+                            </div>
+                            <div class="date">
+                                2020.06.11
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item img_5">
+                    <a href="javascript:;" class="btn_gallery_item">
+                        <div class="item_caption trsprnt">
+                            <div class="item_head">
+                                <div class="category">
+                                    MUSIC
+                                </div>
+                                <div class="new">
+                                </div>
+                            </div>
+                            <div class="title">
+                                We, Together, Overnight
+
+                            </div>
+                            <div class="date">
+                                2020.06.11
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item img_6">
+                    <a href="javascript:;" class="btn_gallery_item">
+                        <div class="item_caption ">
+                            <div class="item_head">
+                                <div class="category">
+                                    MUSIC
+                                </div>
+                                <div class="new">
+                                </div>
+                            </div>
+                            <div class="title">
+                                uplifters
+                            </div>
+                            <div class="date">
+                                2020.06.11
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item img_7">
+                    <a href="javascript:;" class="btn_gallery_item">
+                        <div class="item_caption trsprnt">
+                            <div class="item_head">
+                                <div class="category">
+                                    MUSIC
+                                </div>
+                                <div class="new">
+                                </div>
+                            </div>
+                            <div class="title">
+                                Geography
+                            </div>
+                            <div class="date">
+                                2020.06.11
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item img_8">
+                    <a href="javascript:;" class="btn_gallery_item">
+                        <div class="item_caption">
+                            <div class="item_head">
+                                <div class="category">
+                                    MUSIC
+                                </div>
+                                <div class="new">
+                                </div>
+                            </div>
+                            <div class="title">
+                                이벤트전세계 Lo-fi 아티스트가 선사하는 커피, Etymology Records [Barista Beats]
+                            </div>
+                            <div class="date">
+                                2020.06.11
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="gallery_item img_9">
+                    <a href="javascript:;" class="btn_gallery_item">
+                        <div class="item_caption trsprnt">
+                            <div class="item_head">
+                                <div class="category">
+                                    MUSIC
+                                </div>
+                                <div class="new">
+                                </div>
+                            </div>
+                            <div class="title">
+                                적당한 리듬감으로 가볍게 듣기 좋은 팝
+                            </div>
+                            <div class="date">
+                                2020.06.11
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+        </div><!--//newarrival-->
+
+     </div> <!--//container-->
+
+    <footer>
+         <div class="footer_logo"></div>
+         <div class="footer_sns_ico">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a> 
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a> 
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a> 
+        </div>
+
+        <div class="footer_cate">
+            <div class="row">
+                <span>FEATURE</span>
+                <span>PICKUP</span>
+                <span>SNAP</span>
+            </div>
+            <div class="row">
+                <span>FASHION</span>
+                <span>MUSIC</span>
+                <span>ART</span>
+                <span>CULTURE</span>
+            </div>
+        </div>
+    </footer>
+
+    </div><!--wrap-->
+</body>
+</html>

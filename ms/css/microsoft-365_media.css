@@ -1,0 +1,442 @@
+@media screen and (max-width:1777px) /* and (min-width: 1400px)*/ {
+    .bg_img{
+        background: url(../img/RE4qR3Q_1.png) no-repeat;
+        background-size: cover;
+        width : 100%;
+        height : 0;
+        padding-top : calc(500 / 1600 * 100%);
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    .bg_img{
+        background: url(../img/RE4qR3Q_2.png) no-repeat;
+        background-size: cover;
+/*         background-size: 2091px 561px;
+ */        
+ width : 100%;
+ height : 0;
+ padding-top : calc(472 / 1259 * 100%);
+        }
+
+        
+    header{
+        width: 90%;
+    }
+    
+    .big_banner_txt h2{
+        font-size: 1.5rem;
+    }
+    .big_banner_txt p{
+        font-size: 0.8rem;
+        margin: 20px 0 30px 0;
+    }
+    .big_banner_txt .link_now_down{
+        font-size: 0.8rem;
+        padding: 15px 30px;
+        color: white;
+        background-color: #000;
+        font-weight: bold;
+        display: inline-block;
+        z-index: 9999;
+    }
+
+    .main_banner .slide_text h3{
+        font-size: 1.5rem;
+    }
+    .main_banner .slide_text{
+        width: 420px;
+    }
+    .etc_menu .res_txt{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    header{
+        width: 95%;
+    }
+
+    .container{
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+    
+    }
+}
+
+@media screen and (max-width: 1230px) { 
+    /*전체보기 팝업 사이즈*/
+    .all_menu_wrap{
+        width: 920px;
+    }
+
+}
+@media screen and (max-width: 1080px) { 
+    /*메인배너 높이 늘리기*/
+
+    .bg_img{
+        background: url(../img/RE4qR3Q_3.png) no-repeat;
+        background-size: cover;
+        width : 100%;
+        height : 0;
+        padding-top : calc(609 / 1083 * 100%);
+    }
+
+    .bg_txt{
+        position: relative;
+        top: 0;
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+        left:0;
+        transform : initial;
+
+    }
+
+    .bg_img h3{
+        color: black;
+    }
+    .bg_img .main_banner_txt{
+        color: black;
+    }
+    .bg_txt ul {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .bg_txt .main_banner_login_txt{
+        color: black;
+    }
+
+    .bg_txt .link_login{
+        color: #0067b8;
+        font-weight: bold;
+
+    }
+    .main_banner .slider_item {
+        width: 100%; 
+        height: 100%;
+        padding-top: 58%;
+    }
+    .main_banner .slider_item.banner1{
+        background: url(../img/RE4xqwI.jpg) no-repeat;
+        background-size: cover;
+        background-position: 0px 0px;
+    }
+    .main_banner .slider_item.banner2{
+        background: url(../img/RE4u5ko.jpg) no-repeat;
+        background-size: cover;
+        background-position: 0px 0px;
+    }
+
+    /*전체보기 팝업 사이즈*/
+    .all_menu_wrap{
+        width: 820px;
+    }
+
+    /*쇼핑 이미지4개*/
+    .shpping_info {
+        padding: 50px;
+    }
+    .shopping_intro_list li {
+        width:50%
+    }
+
+
+    /*footer*/
+    footer .footer_menu ul{
+        width: 32.3%;
+    }
+    footer .footer_wrap{
+        width: 100%;
+    }
+    
+}
+/*빅매너 이미지, 텍스트 사이즈*/
+@media screen and (max-width: 840px) {
+    .bg_img{
+        background: url(../img/RE4qR3Q_3.png) no-repeat;
+        background-size: contain;
+    }
+
+    header{
+        width: 100%;
+    }
+    
+    .logo {
+        float : none;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    } 
+
+    .ms365_for_mobile{
+        position: absolute;
+        background-color: white;
+        left: 0;
+        top: 50px;
+        z-index: 99;
+        width: 100%;
+        border-top: 1px solid gray;
+        padding: 10px;
+    }
+
+    .mobile_menu_btn{
+        display: block;
+        float: left;
+        cursor: pointer;
+        line-height: 26px;
+        margin:0.67em 0;
+        outline:1px solid transparent;
+    }
+
+    .mobile_menu_btn::before{
+        font-family: "FontAwesome";
+        content: "\f0c9";
+        width: 25px;
+        height: 25px;
+        display: block;
+        font-size: 1.5rem;
+    }
+
+    .etc_menu li:first-child{
+        display: none;
+    }
+
+    .current_item::before{
+        border:0;
+        height: initial;
+        position: static;
+    }
+    #navListForMobile {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 99;
+        background-color: #f2f2f2;
+        font-size: 0;
+        display: none;
+    }
+    #navListForMobile.on{
+        display: block;
+    }
+    #navListForMobile li{
+        display:block;
+        border-bottom: 1px solid #e6e6e6;
+        width: 100vw;
+        font-size: 1rem;
+        font-weight: normal;
+        margin: 0;
+
+    }
+
+    nav > ul > li > a {
+        padding-left : 15px;
+        font-size: 0.95rem;
+
+    }
+
+    header{
+        height : 59px;
+
+    }
+    ul.etc_menu li{
+        padding: 10px;
+        top: 7px;
+        position: relative;
+        transform: scale(1.2);
+    }
+
+    ul.etc_menu li.li_search{
+        float: left;
+        position: absolute;
+        left: 50px;
+    }
+    ul.etc_menu > li > a{
+        padding: initial;
+    }
+
+
+
+    
+    #navList {         
+        position: absolute;
+        top: 86px;
+        left: 0;
+        z-index: 101;
+        background-color: #f2f2f2; /* rgba(0,0,0,0.5);*/
+        width: 100%;
+        display: none;
+    }
+
+    #navList li{
+        display:block;
+        border-bottom: 1px solid gray;
+    }
+
+    #navList > li .fas {display: none;}
+
+    #navList > li > a {display: block;padding: 0;}
+    
+    #navList > li > a > span {
+        border: none;
+        border-radius: initial;
+        font-weight : normal;
+        padding: 10px;
+        display: block;
+        line-height: initial;
+        vertical-align:initial;
+    }
+
+
+    .main_banner .slider_item {
+        padding-top: 90%;
+    }
+    .main_banner .slide_text {
+        position: relative;
+        display: block;
+        background-color: lightgray;
+        width: 100%;
+        height: 280px;
+        left: 0;  
+        bottom: 0;
+        top: initial;
+        transform: initial;
+        text-align: center;
+        padding: 50px 20px;
+    }
+    .main_banner .slider_item.banner1{
+        background: url(../img/RE4xqwI.jpg) no-repeat;
+        background-position: 100% 0%;
+        background-size: 200% 80%;
+    }
+    .main_banner .slider_item.banner2{
+        background: url(../img/RE4u5ko.jpg) no-repeat;
+        background-size: 200% 80%;
+        background-position: 98% 4%;
+    }
+    .big_banner .big_banner_txt{
+        position: relative;
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 30px;
+        background-color: lightgray;
+        width: 100%;
+        top : 0;
+        
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .bg_img h3{
+        font-size: 2rem;
+    }
+    .video_info h3{
+        font-size: 1.6rem;
+    }
+    .detail_info h3{
+        font-size: 1.6rem;
+    }
+    .detail_info ul {
+        text-align: center;
+        font-size: 0;
+        display: block;
+    }
+    .detail_info ul li {
+        font-size:1rem;
+    }
+    
+    .detail_info ul li+li{
+        margin-top: 50px;
+    }
+    .shpping_info {
+        margin: 0px;
+        padding : 0 20px;
+    }
+    .shopping_ico_list{
+        text-align : left;
+        margin-bottom : 20px;   
+    }
+    .shopping_ico_list li{
+        display : block;
+        text-align : left;
+        margin: 0px 30px ;
+    }
+    .shopping_ico_list li img{
+        float: left;
+        transform: scale(0.5);
+    }
+    .shopping_ico_list li span{
+        text-align : left;
+        float: left;
+        margin-top : 20px;
+    }
+    .shopping_ico_list li::after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+
+}
+
+/* @media screen and (max-width: 737px) { 
+    .bg_img{
+        margin-bottom : 387px;
+    } */
+
+/* 더보기 */
+@media screen and (max-width: 940px) and (min-width:881px){
+    .more_menu_wrap {
+        position:absolute;
+        z-index : 99;
+        top: 65px;
+        box-shadow: 3px 3px;
+        margin-left:-7px;
+    }
+    .more_menu_wrap li {
+        display: block;
+        background-color: #f2f2f2;
+        width: 200px;
+    }
+
+}
+
+/* 더보기 2단계*/
+@media screen and (max-width: 880px) and (min-width:841px){
+        .more_menu_wrap {
+            position:absolute;
+            z-index : 99;
+            top: 65px;
+            box-shadow: 3px 3px;
+
+        }
+        .more_menu_wrap li {
+            display: block;
+            background-color: #f2f2f2;
+            width: 200px;
+        }
+        .has_submenu .sub_menu_wrap {
+            left: 201px;
+            top: 0;
+        }
+    
+    }
+
+
+@media screen and (max-width: 539px) {
+    .bg_img ul li{
+        display: block;
+    }
+    footer .footer_menu ul{
+        display: block;
+        margin-top: 10px;
+    }
+
+    .shopping_intro_list li{
+        width:100%;
+    }
+}

@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body {margin: 0;font-family: 'Nanum Gothic', sans-serif;}
+a {text-decoration:none;color: black;}
+h3 {font-size: 40px;}
+
+/* 헤더 color 재정의*/
+.headlist{
+    background-color: #536caa;
+    transition: all 1s;
+}
+.headlist_white{
+    background-color: #fff !important;
+}
+
+.logo {
+    float: left;
+    text-indent:-99999px;
+    background-image: url(../img/img-kabang-200417.png);
+    width: 120px;
+    height: 30px;
+    background-position: 0px 0px;
+    margin : 30px 0 0 0;
+}
+
+.logo_black{
+    background-position: 0px -25px;
+}
+
+nav .menu > .menuitem > a{
+    color: #fff;
+    transition: all 1s;
+}
+
+nav .menu > .menuitem .btn_submit{
+    color: #000;
+}
+
+nav .menu .menuitem:hover{
+    border-bottom: 2px solid #fff;
+}
+
+nav .menu .menuitem.underline{
+    border-bottom: 2px solid #fff;
+}
+
+.titlle_item{
+    color: #fff;
+}
+.blk_underline{
+    border-bottom: 2px solid #000 !important;
+}
+.blk_bd:hover{
+    border-bottom: 2px solid #000 !important;
+}
+
+/* ---헤더 */
+
+#contanier{
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.content1{
+    width: 100%;
+    height: 540px;
+    background-color: #536caa;
+    color: #fff;
+    display: inline-block;
+}
+
+.content1 .cont_txt{
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.content1 .cont_txt h2{
+    font-size: 1.5rem;
+}
+
+.content1 .cont_txt h3{
+    font-size: 3.2rem;
+    margin: 30px 0 35px;
+}
+.content1 .cont_txt .round_txt{
+    display: inline-block;
+    border-radius: 30px;
+    background-color: rgba(0,0,0, 0.2);
+    padding: 10px;
+    width:190px
+}
+
+.content1 .cont_txt ul{
+    margin-top: 50px;
+}
+
+.content1 .cont_txt ul li{
+    display: inline-block;
+    padding: 0px 40px;
+    color: #fff;
+    border-right: 1px solid rgba(255,255,255, 0.2);
+    text-align: justify;
+}
+
+.content1 .cont_txt ul li:last-child{
+    border-right: none;
+}
+.content1 .cont_txt  ul li .title_txt{
+    font-size: 1rem;
+}
+.content1 .cont_txt  ul li .emph{
+    font-size: 2.1rem;
+}
+.content1 .cont_txt  ul li .unit_txt{
+    font-size: 1.4rem;
+}
+
+.content_wrap{
+    width: 1080px;
+}
+
+.content2{
+    background-color:none;
+}
+
+.content2 .cont_txt{
+    text-align: center;
+    padding : 100px 390px
+}
+
+.content2 .cont_txt ul{
+    margin-top:60px;
+}
+
+.content2 .cont_txt ul li{
+    display: inline-block;
+    margin : 0 25px;
+}
+
+.content2 .cont_txt ul li .list_img1{
+    background: url(../img/img_loan-200415.png) no-repeat;
+    width: 90px;
+    height: 90px;
+    background-position: -438px 0px;
+    margin : 0 auto;
+
+}    
+
+.content2 .cont_txt ul li .list_img2{
+    background: url(../img/img_loan-200415.png) no-repeat;
+    width: 80px;
+    height: 90px;
+    background-position: -538px 0px;
+    margin : 0 auto;
+
+}    
+.content2 .cont_txt ul li .list_img3{
+    background: url(../img/img_loan-200415.png) no-repeat;
+    width: 70px;
+    height: 90px;
+    background-position: -447px -95px;
+    margin : 0 auto;
+
+}    
+.content2 .cont_txt ul li .list_img4{
+    background: url(../img/img_loan-200415.png) no-repeat;
+    width: 90px;
+    height: 90px;
+    background-position: -524px -93px;
+    margin : 0 auto;
+
+}    
+.content2 .cont_txt ul li .list_txt{
+    margin-top: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.content3{
+    background-color: #f7f7f7;
+    height: 430px;
+}
+
+.cont_wrap{
+    width: 1120px;
+    margin: 0 auto;
+/*     content: '';
+    clear: both; */
+    position: relative;
+    height:100%;
+}
+
+.content3 .cont_txt{    
+    top: 150px;
+    position: relative;
+    float: left;
+}
+
+.content3 .cont_txt p{
+    margin-top: 20px;
+    color:#666666;
+}
+
+.content3 .cont_img{
+    float: left;
+    width: 650px;
+    height: 420px;
+    background:url(../img/img_loan-200415.png) no-repeat;
+    background-position: -9px -230px;
+    position: absolute;
+/*     animation-name: movePhone;*/
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease; 
+    left:40%;
+    transition: all 1s;
+}
+
+ @keyframes movePhone { 
+    from {
+        transform: translate(50px, 50px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+}
+ 
+.content3 .cont_img::after{
+    content: '';
+    clear: both;
+}
+
+.content3 .cont_img2{
+    width: 339px;
+    height: 209px;
+    background:url(../img/img_loan-200415.png) no-repeat;
+    background-position: -353px -664px;
+    position: absolute;
+    top: 54px;
+    left:89px;
+    transform: scale(0.85);
+
+	background-size: 689px 1002px;
+/*     animation-name: moveBank;
+ */ 
+    animation-delay: 1s;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+
+}
+
+@keyframes moveBank {
+    from {
+        top: 54px;
+        left:89px;
+        transform: scale(0.85);
+    }
+    to {
+        top: 33px;
+        left:88px; 
+        transform: scale(1);}
+}
+
+
+.cont_money{
+    display: inline-block;
+    transform : rotate(-32deg) skewX(27deg);
+    position: absolute;
+    top: 100px;
+    left: 110px;
+
+}
+
+.content4{
+    background-color:#3d537b;
+    height: 554px;
+    width: 100%;
+}
+
+.content4 .cont_txt{
+    color: white;
+    position: relative;
+    top: 100px;
+}
+
+.content4 .cont_txt p{
+    margin-top: 20px;
+    color: rgba(255, 255,255, 0.3);
+}
+
+.content4 .cont_img {
+    position: absolute;
+    left:170px;
+    display: inline-block;
+    bottom:0;
+    height: 346px;
+    width: 100%;
+    
+}
+
+.content4 .char_img1{
+    background: url(../img/img_friends_card.png) no-repeat;
+    background-position: -400px -245px;
+    width: 185px;
+    height: 133px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.content4 .char_img2{
+    background: url(../img/img_friends_card.png) no-repeat;
+    background-position: -430px 0;
+    width: 142px;
+    height: 242px;
+    position: absolute;
+    left: 150px;
+    bottom: -30px;
+
+}
+.content4 .char_img3{
+    background: url(../img/img_friends_card.png) no-repeat;
+    background-position: -579px 0;
+    width: 73px;
+    height: 90px;
+    position: absolute;
+    left: 300px;
+    bottom: -10px;
+}
+.content4 .char_img4{
+    background: url(../img/img_friends_card.png) no-repeat;
+    background-position: -268px -247px;
+    width: 131px;
+    height: 177px;
+    position: absolute;
+    left: 400px;
+    top: 200px;
+    z-index: 999;
+}
+.content4 .char_img5{
+    background: url(../img/img_friends_card.png) no-repeat;
+    background-position: -270px 0;
+    width: 156px;
+    height: 245px;
+    position: absolute;
+    left: 530px;
+    bottom: -30px;
+    z-index: 999;
+
+}
+.content4 .char_img6{
+    background: url(../img/img_friends_card.png) no-repeat;
+    background-position: 0 0;
+    width: 266px;
+    height: 346px;
+    position: absolute;
+    left: 450px;
+    bottom: 0;
+}
+
+.info_cont_wrap {
+    padding : 120px 0;
+    width: 1120px;
+    margin: 0 auto;
+    position: relative;
+    height:100%;
+}
+
+.content5 h3{
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+
+.content5 dl dt{
+    margin:20px 0;
+    font-size: 1.1rem;
+}
+
+.content5 dl dd{
+    color:rgb(136, 136, 136);
+    border-bottom: 1px solid rgb(224, 224, 224);
+    padding-bottom: 20px;
+
+}
+
+.btn_qna{
+    display: block;
+    width: 300px;
+    background-color:rgba(0,0,0,0.05);
+    padding: 20px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+
+.content6 {
+    padding-top : 70px;
+}
+
+.content6 a.slideTitleBtn{
+    display: block;
+     padding: 20px;
+     position: relative;
+
+}
+
+
+.content6 .slide_title{
+     border-top: 1px solid rgba(0,0,0,0.1);
+     font-size: 1.1rem;
+}
+
+.content6 .slide_detail{
+    border-top: 1px solid rgba(0,0,0,0.1);
+    line-height:1.6rem;
+}
+
+.content6 .slide_title:first-child{
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.content6 .slide_title:last-child{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.content6 .slide_title .arrow {
+    background: url(../img/img_kakaobank.png) no-repeat;
+    background-position: -100px -120px;
+    width: 14px;
+    height: 8px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.content6 .slide_title .arrow_up {
+    background-position: -100px -130px;
+}
+
+.detail_box{
+    display: none;
+}
+
+.content6 .slide_detail{
+    padding: 50px;
+}
+
+.content6 dl dt{
+    font-size: 1rem;
+    margin : 30px 0 15px;
+}
+.content6 dl dt:first-child{
+    margin-top : 0;
+}
+
+
+.content6 dl dd{
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.6);
+}
+
+.content6 .slide_detail .emph_red{
+    color:red;
+}
+
+.bg_color{
+    background-color:#f4f4f4;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+}
+
+th:first-child{
+    width:25%;
+}
+table th {
+    background-color: #f4f4f4;
+    height: 50px;       
+    font-weight: normal;
+} 
+
+table td {
+    background-color: #fff;
+
+}
+
+table thead, th, td {border: 1px solid #dcdcdc;}
+
+table .emph{
+    font-weight: bold;
+    color: #000;
+}
+
+.fl {float: left;}
+.fr {float: right;}
+
+.loan_product_detail_download::after{
+    content: '';
+    display: block;
+    clear: both;
+
+}
+
+
+.loan_product_detail_download{
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+
+.loan_detail dl{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 20px;
+}
+
+.content7{margin-top:120px;}
+
+.content7 h3{
+    text-align: center;
+    font-size: 2rem;
+    margin:40px 0;
+}
+
+.content7 ul::after{
+    content:'';
+    display: block;
+    clear: both;
+}
+
+.content7 li{
+    float : left;
+    height: 120px;
+    width: 180px;
+    margin: 0 6px 6px 0;
+}
+
+.loan_bg{
+    background-color: #526baa;
+}
+
+.saving_bg{
+    background-color:#35a67d;
+}
+
+.content7 li a{
+    position: relative;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+
+}
+
+
+.content7 li .card_bg{
+    background: url(../img/img_kakaobank.png) no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: block;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+.content7 li .bankbook_ico{
+    background-position: -180px -60px;
+}
+.content7 li .money_ico{
+    background-position: -240px -60px;
+}
+.content7 li .house_ico{
+    background-position: -120px -120px;
+}
+.content7 li .wallet_ico{
+    background-position: -120px 0;
+}
+.content7 li .people_ico{
+    background-position: -240px -120px
+}
+.content7 li .safe_ico{
+    background-position: -180px -120px;
+}
+.content7 li .moneybag_ico{
+    background-position: -240px 0;
+}
+.content7 li .coin_ico{
+    background-position: -180px 0;
+}
+
+
+.content_etc {
+    padding-top: 50px;
+    text-align: right;
+}

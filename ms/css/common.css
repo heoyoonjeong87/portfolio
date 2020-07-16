@@ -1,0 +1,39 @@
+.mt10{
+    margin-top:10px;
+}
+.mt20{
+    margin-top:20px;
+}
+.mt30{
+    margin-top:30px;
+}
+.mt40{
+    margin-top:40px;
+}
+.mb20{
+    margin-bottom:20px;
+}
+.mb30{
+    margin-bottom:30px;
+}
+.mb40{
+    margin-bottom:40px;
+}
+
+.mtb30{
+    margin:30px 0;
+}
+.mtb40{
+    margin:40px 0;
+}
+.ml30{
+    margin-left:10px;
+}
+.ml50{
+    margin-left:50px;
+}
+
+.mr10{
+    margin-right:10px;
+
+}

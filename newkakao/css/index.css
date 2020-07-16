@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+body {margin: 0;font-family: 'Nanum Gothic', sans-serif;}
+
+* {
+    box-sizing:border-box;
+    margin: 0;
+}
+
+::selection{
+    background:#fede22;}
+::-moz-selection{
+    background : #fede22;}
+::-webkit-selection{background : #fede22;}
+.wrap {
+    width:100%;
+    height:auto;
+}
+
+/* 헤드 main_header.css */
+
+
+/*컨텐츠*/
+
+.container {
+    width:100%;
+    height: 100%;
+}
+
+.container h3{
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+.container p{
+    font-size: 15px;
+}
+
+
+.container a:hover{
+    text-decoration: underline;
+}
+
+.container .main_banner{
+    background-image: url(../img/main-bg2.png);
+    height: 868px;
+    width: 1200px;
+    margin: 0 auto;
+    background-size: 1200px;
+}
+
+.container .main_bg{
+    background-color:#fede22;
+    width: 100%;
+    height: 720px;
+}
+.container .main_bg .main_banner{
+    position: relative;
+}
+
+.container .main_bg .main_banner .txtlist{
+    position: absolute;
+    top: 210px;
+    left:100px;
+}
+
+.container .main_bg .main_banner .txtlist h3{
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 4rem;
+}
+
+
+.container .main_bg .main_banner .txtlist p{
+    margin-top: 20px;
+    font-size: 17px;
+    line-height: 1.5rem;
+}
+
+.container .main_bg .main_banner .txtlist .btn_area{
+    top: 50px;
+    position: relative;
+}
+
+.container .main_bg .main_banner .txtlist .btn_area a{
+    display: inline-block;
+    background: white;
+    border-radius: 15px;
+    padding: 15px 20px;
+    width: 168px;
+    font-weight: bold;
+
+
+}
+
+.btn_appstore{
+    margin-left: 10px;
+
+}
+
+.img_playstore{
+    display: inline-block;
+    width: 28px;
+    height: 29px;
+    background: url(../img/img-kabang-200417.png) no-repeat;
+    background-position: -339px -291px;
+    margin: 0 5px 0 0;
+    vertical-align:middle;
+}
+
+.img_appstore{
+    display: inline-block;
+    width: 28px;
+    height: 29px;
+    background: url(../img/img-kabang-200417.png) no-repeat;
+    background-position: -371px -291px;
+    margin: 0 5px 0 0;
+    vertical-align:middle;
+}
+
+.content0{
+    height: 748px;
+}
+
+.content1{
+    width: 1200px;
+    height: 780px;
+    margin: 0 auto;
+    margin-top: 150px;
+    position: relative;
+}
+
+.content1 .cont_main_img{
+    float: left;
+    position: absolute;
+    left:5%;
+
+}
+.content1 .cont_main_img img{
+    width: 430px;
+}
+
+.content1 .cont_main_txt{
+    float: left;
+    position: absolute;
+    top: 150px;
+    left: 55%;
+
+}
+
+.content1 .cont_main_txt h3{
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+.content1 .cont_main_txt p{
+    margin-top: 30px;
+    font-size: 15px;
+    line-height:1.5rem;
+}
+
+.content1 .cont_main_txt a{
+    margin-top: 50px;
+    display: inline-block;
+    background-color: #f6f6f6;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.sec_gray{
+    width: 100%;
+    height: 50px;
+    background-color: #f6f6f6;
+}
+
+.content2{
+    width: 1200px;
+    height: 800px;
+    margin: 100px auto;
+    position: relative;
+}
+
+
+
+
+.content2 .cont_main_txt{
+    float: left;
+    position: absolute;
+    left: 10%;
+    top: 200px;
+}
+.content2 .cont_main_txt h3{
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+.content2 .cont_main_txt p{
+    margin-top: 30px;
+    font-size: 15px;
+    line-height: 1.5rem;
+
+}
+
+.content2 .cont_main_txt > img{
+    width: 450px;
+    display: block;
+    margin-top: 50px;
+
+}
+
+
+.content2 .cont_main_img{
+    float: left;
+    position: absolute;
+    transition: all 1s;
+/*     animation-name: moveToLeft;
+ */ 
+    animation-iteration-count: 1;
+    animation-timing-function: ease; 
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+    overflow: hidden;
+    opacity: 0;
+
+}	
+
+
+@keyframes moveToLeft { 
+    from {
+        top : 5%;
+        left : 80%;
+        opacity: 0;
+    }
+    to {
+        top : 5%;
+        left : 60%;
+        opacity: 1;
+    }
+}
+
+.content2 .cont_main_img img{
+    width: 409px;
+}
+
+.content2 .txt_button{
+    display: inline-block;
+
+}
+.content2 .cont_main_txt a{
+    margin-top: 50px;
+    display: block;
+    width: 150px;
+    background-color: #f6f6f6;
+    padding: 20px 25px;
+    border-radius: 10px;
+    text-align: center;
+    float: left;
+    margin-right : 10px;
+}
+
+.content3{
+    width: 1200px;
+    height: 780px;
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+}
+
+.content3 .cont_main_img{
+    float: left;
+    position: absolute;
+    left:5%;
+}
+
+.content3 .cont_main_img img{
+    width: 459px;
+}
+
+.content3 .cont_main_txt{
+    float: left;
+    position: absolute;
+    left : 54%;
+    top:150px;
+}
+
+.content3 .cont_main_txt p{
+    margin-top:30px;
+    line-height:1.5rem;
+}
+
+.content3 .cont_main_txt a{
+    margin-top: 50px;
+    display: inline-block;
+    background-color: #f6f6f6;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+
+
+.content4 {
+    width: 1200px;
+    height: 780px;
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+}
+
+.content4 .cont_main_txt{
+    float: left;
+    position: absolute;
+    left : 10%;
+    top:150px;
+
+}
+
+.content4 .cont_main_txt p{
+    margin-top:30px;
+    line-height: 1.5rem;
+}
+
+.content4 .cont_main_txt a{
+    margin-top: 50px;
+    display: inline-block;
+    background-color: #f6f6f6;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 258px;
+    text-align: center;
+}
+
+.content4 .cont_main_img{
+    float: left;
+    position: absolute;
+    left:55%;
+    top:120px;
+    height:408px;
+
+}
+
+.content4 .cont_main_img img{
+    width: 459px;
+}
+
+
+.content5{
+    height: 780px;
+    margin: 0 auto;
+    margin-top: 100px;
+    position: relative;
+    background: url(../img/home-map.png) no-repeat;
+    background-position:-12% 50%;
+}
+
+.content5 .cont_main_img{
+    float: left;
+    position: absolute;
+    transition: all 1s;
+/*    animation-name: moveToUp;*/
+    animation-iteration-count: 1;
+    animation-timing-function: ease; 
+    animation-duration: 1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+    overflow: hidden;
+    opacity: 0;
+    
+}
+
+@keyframes moveToUp { 
+    from {
+        bottom : -50%;
+        left:47%;
+        opacity: 0;
+        margin-left: -400px;
+
+    }
+    to {
+        bottom : 10%;
+        left:47%;
+        opacity: 1;
+        margin-left: -400px;
+
+    }
+}
+
+.content5 .cont_main_img img{
+    width: 408px;
+}
+
+.content5 .cont_main_txt{
+    float: left;
+    position: absolute;
+    left : 50%;
+    top:150px;
+    margin-left: 90px;
+}
+
+.content5 .cont_main_txt p{
+    margin-top:30px;
+    line-height: 1.5rem;
+}
+
+.content5 .cont_main_txt a{
+    margin-top: 50px;
+    display: inline-block;
+    background-color: #f6f6f6;
+    padding: 20px 25px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.content6{
+    height: 930px;
+    position: relative;
+    background-color:#333b58;
+}
+
+/*하늘색바꾸기*/
+.day_sky{
+    position: absolute;
+    background-color:#559cde;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+/*     animation-name: changeTime;
+ */    animation-iteration-count: 1;
+
+    animation-duration: 1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+
+@keyframes changeTime { 
+     from {
+     }
+     to {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 100%;
+     } 
+}
+   
+.moon_wrap{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 20%;
+    top: 40%;
+}
+
+/*달에서 해로 색바꾸기*/
+.moon_wrap .moon{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+/*     animation-name: changeSunToMoon;
+ */ 
+    transition: background-color 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+}
+@keyframes changeSunToMoon { 
+    from {
+        background-color: yellow;
+    }
+    to {
+        background-color: white;
+
+    } 
+}
+
+/*달그림자 나타나며 커지기*/
+.moon_wrap .moon_add{  
+    top: -20px; 
+    left: 30px;
+    border-radius: 50%;
+    position: absolute;
+    overflow: hidden;
+    /*animation-name: moveMoonShadow;*/
+    animation-iteration-count: 1;
+    animation-timing-function: ease; 
+    animation-duration: 0.6s;
+    -webkit-animation-fill-mode:both;
+    animation-fill-mode:both;
+    animation-delay: 1s; /*딜레이*/
+    width: 1%;
+    height: 1%;
+    background-color: transparent;
+}
+
+@keyframes moveMoonShadow { 
+    from {
+    }
+    to {
+        width: 100%;
+        height: 100%;
+        background: #333b58;
+    }
+}
+
+
+.ico_star{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 40%;
+}
+
+.ico_star1{
+    left:10%;
+    top:30%;
+}
+
+.ico_star2{
+    top:60%;
+    left:30%;
+}
+
+.ico_star3{
+    top:80%;
+    left:70%;
+}
+.ico_star4{
+    top:80%;
+    left:20%;
+}
+.ico_star5{
+    top:10%;
+    left:70%;
+}
+
+.ico_star[class*="on"] {
+    background-color : #fff;
+    animation-name : twinkle;
+    animation-duration: 2s;
+    animation-iteration-count : infinite
+}
+
+@keyframes twinkle{
+    0%{
+        opacity:0;transform:scale(0.2)
+    }50%{
+        opacity:1;transform:scale(1)
+    }100%{
+        opacity:0;transform:scale(0.5)
+    }
+}
+
+.content6 .cont_main_txt{
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 150px;
+}
+
+
+.content6 .cont_main_txt p{
+    margin-top: 30px;
+    color: rgb(255,255,255,0.4);
+}
+
+
+.content6 ul{
+    margin-top: 30px;
+}
+
+.content6 ul li{
+    display: inline-block;
+    color: white;
+    padding: 13px 0 13px 0;
+    background-color:rgba(255,255,255,0.09);
+    border-radius: 10px;
+    width: 166px;
+    height: 50px;
+}
+
+.content6 ul li a{
+    color: white;
+
+}
+
+.content6 .cont_main_img img{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 429px;
+    margin-left: -215px;
+}
+
+.content7{
+    height: 930px;
+    position: relative;
+}
+
+
+.content7 .cont_main_txt{
+    text-align: center;
+    margin-top: 100px;
+}
+
+.content7 .cont_main_txt p{
+    margin: 30px 0;
+}
+
+.content7 .cont_main_txt a{
+    display: inline-block;
+    background-color: #f6f6f6;
+    padding: 20px 10px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.content7 .cont_main_img{
+    /* top: 100px; */
+    position: relative;
+    display: block;
+    width: 100%;
+     height: 600px;
+    padding-top: 100px;
+
+    margin: 0 auto;
+}
+
+.slick-slide{
+    position : relative;
+    top: 30px;
+}
+.card_slide_div {
+    width: 660px;
+    margin: 0 auto;
+    height: 475px; 
+}
+.slide_item{
+    position: relative;
+    width: 240px;
+}
+.slide_item img{
+    width: 100%;
+}
+.slick-prev{
+    left : -100px;
+}
+.slick-next{
+    right : 10px;
+}
+
+.slick-prev:before{
+    content:'' !important;
+    background: url(../img/btn-arrow-l.png);
+    display: block;
+    width: 50px;
+    height: 58px;
+    background-size: contain;
+    opacity: 0.1;
+}
+
+.slick-next:before{
+    content:'';
+    background: url(../img/btn-arrow-r.png);
+    display: block;
+    width: 50px;
+    height: 58px;
+    background-size: contain;
+    opacity: 0.1;
+}
+.slick-current img {
+    width: 280px;
+}
+
+
+.slick-slide{
+    position: relative;
+    top:40px;
+}
+
+.slick-current{
+/*     margin-top: -20px;
+ */    left : -77px;
+    z-index: 100;
+    top:0;
+}
+
+.slick-current+.slick-active{
+    left: -100px;
+}
+
+
+/*slick*/
+.content8{
+    position: relative;
+    height: 940px;
+    background-color: #f9f9f9;
+    padding-bottom: 150px;
+}
+
+.content8 .cont_main_txt{
+    text-align: center;
+    padding-top: 100px;
+}
+
+.content8 .cont_main_txt img{
+    width:1020px;
+    margin-top: 100px;
+}
+
+.content8 .hr_box{
+    position: relative;
+    margin: 20px 20px;
+    padding: 30px;
+}
+
+.content8 hr{
+    width: 100px;
+    left: 50%;
+    position: absolute;
+    margin-left: -50px;
+    border: 1px solid black;
+}
+
+.content8 .cont_main_txt ul{
+    height:180px;
+    width: 1020px;
+    margin: 0 auto;
+    padding: 50px 0 0 0;
+    position: relative;
+}
+
+.content8 ul li{
+    display: inline-block;
+}
+
+.content8 ul li p strong{
+    font-size: 18px;    
+    color: #000;
+}
+
+.content8 ul li p{
+    font-size: 14px;    
+    color:#666;
+    line-height: 1.4rem;
+}
+
+.content8 ul li p:last-child{
+    margin-top: 15px;
+}
+
+
+.content8 .cont_main_txt ul li.bank_item{
+    position: absolute;
+    left : 2%;
+}
+.content8 .cont_main_txt ul li.bank_item2{
+    position: absolute;
+    left : 50%;
+    margin-left: -240px;
+}
+.content8 .cont_main_txt ul li.bank_item3{
+    position: absolute;
+    right  : 0;
+}

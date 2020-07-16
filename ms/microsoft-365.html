@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="script/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="css/microsoft-365.css">
+    <link rel="stylesheet" type="text/css" href="css/microsoft-365_media.css">
+
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+
+    <script src="script/jquery-3.5.1.min.js"></script>
+    <script src="script/slick.js"></script>
+    <script src="https://kit.fontawesome.com/e545ec33c1.js" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+
+            $(".has_submenu").click(function(){
+                $(this).siblings().children('.sub_menu_wrap').hide();
+
+                $(".item").not($(this)).removeClass("dotted");
+                $('.item').removeClass("dotted_wh");
+
+
+                //if (window.innerWidth > 840){
+                    $(this).children('.sub_menu_wrap').toggle();
+
+                    $(this).toggleClass("dotted");
+                //}
+
+            });
+
+            $(".link_item").click(function(){
+                $(".item").removeClass("dotted");
+                $('.item').not($(this)).removeClass("dotted_wh");
+                $(this).siblings().children('.sub_menu_wrap').hide();
+
+                $(this).toggleClass("dotted_wh");
+            });
+
+            $(".all_menu_btn").click(function(){
+                $(this).toggleClass("dotted");
+                $(".all_menu_wrap").toggle();
+            });
+
+                                                           
+            $('.more_menu_btn').click(function () {
+                $(this).toggleClass("dotted");
+                $(".more_menu_wrap").toggle();
+            });
+
+            $(".mobile_menu_btn").on('click', function () {
+                $("#navListForMobile").toggle();
+            });
+
+            $(".ms365_for_mobile").click(function(){
+                $("#navList").toggle();
+            });
+            function initMoreBtn() {
+                var elm = document.querySelector('.more_menu');
+                    var navUlNode = document.querySelector('nav > ul');
+                    var more_menu = document.querySelector('.more_menu');
+                    var buyBtn = document.querySelector('.buyBtn');
+                    
+                    //자세히에 들어간 메뉴원상복구
+                    var ul = document.querySelector('.more_menu_wrap > ul');
+                    if (ul != null){
+                        var li_list = document.querySelector('.more_menu_wrap > ul').children;
+                        var len = li_list.length;
+
+                        for (var i = 0 ; i < len ; i++){
+                            navUlNode.appendChild(li_list[0]);
+                        }
+                        navUlNode.appendChild(more_menu);
+                        navUlNode.appendChild(buyBtn);
+
+                        more_menu.style.display = "none"; //$(".more_menu").hide();
+                    }
+            }
+            //원상복구
+            var mql_step0 = window.matchMedia("screen and (min-width: 941px)");
+            funcMqlStep0(mql_step0);
+            mql_step0.addListener(funcMqlStep0)
+            function funcMqlStep0(mql){
+                if(mql.matches) {
+                    initMoreBtn();
+                }
+            }
+            //XBOX, 지원 -> 자세히 밑으로
+            var mql_step1 = window.matchMedia("screen and (max-width: 940px) and (min-width:881px)");
+            funcMqlStep1(mql_step1);
+            mql_step1.addListener(funcMqlStep1)
+            function funcMqlStep1(mql){
+                if(mql.matches) {
+                    initMoreBtn();
+                    const items = document.querySelectorAll('#navList .item');
+                    var elm1 = document.querySelectorAll('#navList .item')[2];
+                    var elm2 = document.querySelectorAll('#navList .item')[3];
+                    var more_menu = document.querySelector('.more_menu');
+                    var navUl = document.querySelector('#navList');
+                    var ulElm = document.querySelector('.more_menu .more_menu_wrap > ul');
+
+                    document.querySelector(".more_menu").style.display = "inline-block";
+                    document.querySelector('.more_menu .more_menu_wrap').style.display  = "none";
+
+                    ulElm.appendChild(elm1);
+                    ulElm.appendChild(elm2);
+
+                    var elm = document.querySelector('.more_menu');
+
+                } 
+            }
+
+            //리소스 -> 자세히 밑으로
+            var mql_step2 = window.matchMedia("screen and (max-width: 880px) and (min-width:841px)");
+            funcMqlStep2(mql_step2);
+            mql_step2.addListener(funcMqlStep2);
+            function funcMqlStep2(mql){
+                if(mql.matches) {
+                    initMoreBtn();
+
+                    var mainItems = document.querySelectorAll('nav > ul > .item');
+
+                    var moreMenu = document.querySelector('.more_menu');
+                    document.querySelector(".more_menu").style.display = "inline-block";
+                    document.querySelector('.more_menu .more_menu_wrap').style.display  = "none";
+
+                    var ulElm = document.querySelector('.more_menu .more_menu_wrap > ul');
+
+                    for (var i = 1 ; i < 4 ; i++){   //1 2 3
+                        if ( mainItems[1] != undefined ){
+                            var mainItem = document.querySelectorAll('nav > ul > .item')[1];
+                            ulElm.appendChild(mainItem);
+                        }
+
+                    }
+                } 
+            }
+            //모바일용. 햄버거메뉴에 메뉴 추가로 붙이기
+            var mql_step3 = window.matchMedia("screen and (max-width: 840px)");
+            funcMqlStep3(mql_step3);
+            mql_step3.addListener(funcMqlStep3);
+            function funcMqlStep3(mql3){
+                if(mql3.matches) {
+                    initMoreBtn();
+
+                    //ms365보여주기
+                    const navUl = document.querySelector('#navList');
+                    $(".ms365_for_mobile").show();
+                    $("#navList").hide();
+                    $("#navList > .current_item .menu_txt").text("홈");
+
+                    const mobileMenu = document.querySelector('#navListForMobile');
+                    if (mobileMenu == null || mobileMenu == undefined){
+                        const nav = document.querySelector('nav');
+                        var newUl = document.createElement('ul');
+                        newUl.id = 'navListForMobile'; //없으면 만들기
+                        
+                        var all_menu_sub_elms = document.querySelectorAll('.all_menu_list .all_menu_sub > li');
+
+                        for (let i = 0 ; i < all_menu_sub_elms.length ; i++){
+                            var li = document.querySelectorAll('.all_menu_sub > li')[i].cloneNode(true);
+                            newUl.appendChild(li);
+                        }
+
+                        const all_menu_items = document.querySelectorAll('.all_menu_list .all_menu_items > .mobile_menu_item');
+                        ///
+                        for(let i = 0 ; i< all_menu_items.length ; i++){
+                            let li = document.querySelectorAll('.all_menu_list .all_menu_items > .mobile_menu_item')[i].cloneNode(true);
+                            console.log(all_menu_items[i]);
+                            newUl.appendChild(li);
+
+                        }
+                        nav.appendChild(newUl);
+                    }
+
+
+
+                    
+                    
+//all_menu_sub
+
+                    //전체메뉴에서 모바일용메뉴 nav에 붙이기
+                    // var all_menu_list_cnt = document.querySelectorAll('.mobile_menu_item').length //.length; = 6
+                    // var navList = document.querySelector('#navList');
+
+                    // for (var i = 0 ; i < all_menu_list_cnt ; i++) {
+                    //    var li = document.querySelectorAll('.all_menu_list > ul > .mobile_menu_item')[i].cloneNode(true);
+                    //     navList.appendChild(li);
+                    // }
+                    // $("#navList").hide();
+                }else {
+                    $(".ms365_for_mobile").hide();
+                    $("#navListForMobile").hide();
+                    $("#navList > .current_item .menu_txt").text("Microsoft 365");
+
+                    //모바일메뉴에 전체메뉴 first 아이템 붙인거 지워줌
+                    var mobile_menu_items = document.querySelectorAll('#navList > .mobile_menu_item');
+                    if (mobile_menu_items != undefined && mobile_menu_items != null){
+                        Array.prototype.forEach.call( mobile_menu_items, function( node ) {
+                            node.parentNode.removeChild( node );
+                        });
+                    }
+                    $("#navList").show();
+                }
+            }
+
+        });
+    </script>
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo">
+                <a href="index.html">
+                    <span class="blind">로고</span>
+                </a>
+            </h1>
+            <nav>
+                <button type="button" class="mobile_menu_btn" aria-label="모든 Microsoft 확장하여 Microsoft 제품 및 서비스의 목록 보기" tabindex="2"></button>
+                <div class="ms365_for_mobile" style="display: none;"><a href="#"><span class="menu_txt">Microsoft 365</span></a></div>
+                <ul id="navList">
+                    <li class="current_item"><a href="#"><span class="menu_txt">Microsoft 365</span></a></li>
+                    <li class="item has_submenu">
+                        <a href="#"><span class="menu_txt">제품</span><i class="fas fa-chevron-down"></i></a>
+                        <div class="sub_menu_wrap">
+                            <div class="sub_menu_list">
+                                <ul>
+                                    <li class="mobile_menu_item"><a href="#">가정용</a></li>
+                                    <li><a href="#">플랜 및 가격</a></li>
+                                    <li><a href="#">가정용</a></li>
+                                    <li><a href="#">개인용</a></li>
+                                    <li><a href="#">학생용</a></li>
+                                    <li><a href="#">모든 가정용 제품 보기</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="mobile_menu_item"><a href="#">비즈니스용</a></li>
+                                    <li><a href="#">플랜 및 가격</a></li>
+                                    <li><a href="#">중소기업</a></li>
+                                    <li><a href="#">신규 비즈니스</a></li>
+                                    <li><a href="#">학교</a></li>
+                                    <li><a href="#">모든 비즈니스 보기</a></li>
+
+                                </ul>
+                                <ul>
+                                    <li class="mobile_menu_item"><a href="#">엔터프라이즈용</a></li>
+                                    <li><a href="#">플랜 및 가격</a></li>
+                                    <li><a href="#">엔터프라이즈용</a></li>
+                                    <li><a href="#">일선 직원</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="mobile_menu_item"><a href="#">앱 및 서비스</a></li>
+                                    <li><a href="#">Excel</a></li>
+                                    <li><a href="#">Microsoft Teams</a></li>
+                                    <li><a href="#">OneDrive</a></li>
+                                    <li><a href="#">Outlook</a></li>
+                                    <li><a href="#">PowerPoint</a></li>
+                                    <li><a href="#">SharePoint</a></li>
+                                    <li><a href="#">Word</a></li>
+                                    <li><a href="#">모든 앱 및 서비스 보기</a></li>
+                                </ul>
+                                <ul>
+                                    <li class="mobile_menu_item"><a href="#">더 보기</a></li>
+                                    <li><a href="#">Microsoft Office</a></li>
+                                    <li><a href="#">Office 365</a></li>
+                                    <li><a href="#">Windows</a></li>
+                                    <li><a href="#">Enterprise Mobility + Security</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item has_submenu">
+                        <a href="#"><span class="menu_txt">리소스</span><i class="fas fa-chevron-down"></i></a>
+                        <div class="sub_menu_wrap">
+                            <div class="sub_menu_list sub_menu_resource">
+                                <ul>
+                                    <li><a href="#">계정 및 청구</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">설정 및 설치</a></li>
+                                    <li><a href="#">교육</a></li>
+                                    <li><a href="#">새로운 기능</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="item link_item"><a href="#"><span class="menu_txt">서식파일</span></a></li>
+                    <li class="item link_item"><a href="#"><span class="menu_txt">지원</span></a></li>
+                    <li class="more_menu" style="display:none"><a class="more_menu_btn" href="#"><span class="menu_txt" >자세히</span></a><div class="more_menu_wrap"><ul></ul></div></a></li>
+
+                    <li class="buyBtn link_item"><a href="#" class="btn_buy_now"><span class="menu_txt">지금구입</span></a></li>
+
+                </ul>
+            </nav>
+
+            <ul class="etc_menu">
+                <li><a href="#" class="all_menu_btn"><span class="menu_txt">Microsoft 전체</span><i class="fas fa-chevron-down"></i></a>
+                <div class="all_menu_wrap" style="display: none;">
+                    <div class="all_menu_list">
+                        <ul class="all_menu_sub">
+                            <li><a href="#">Microsof365</a></li>
+                            <li><a href="#">Office</a></li>
+                            <li><a href="#">Windows</a></li>
+                            <li><a href="#">Surface</a></li>
+                            <li><a href="#">Xbox</a></li>
+                            <li><a href="#">지원</a></li>
+                        </ul>
+                        <ul class="all_menu_items">
+                            <li class="mobile_menu_item"><a href="#">소프트웨어</a></li>
+                            <li><a href="#">Windows앱</a></li>
+                            <li><a href="#">OneDrive</a></li>
+                            <li><a href="#">Outlook</a></li>
+                            <li><a href="#">Skype</a></li>
+                            <li><a href="#">OneNote</a></li>
+                            <li><a href="#">Microsoft Teams</a></li>
+                        </ul>
+                        <ul class="all_menu_items">
+                            <li class="mobile_menu_item"><a href="#">PC 및 장치</a></li>
+                            <li><a href="#">Xbox 쇼핑</a></li>
+                            <li><a href="#">PCs & tablets</a></li>
+                            <li><a href="#">주변기기</a></li>
+                        </ul>
+                        <ul class="all_menu_items">
+                            <li class="mobile_menu_item"><a href="#">엔터테인먼트</a></li>
+                            <li><a href="#">Xbox Game Pass Ultimate</a></li>
+                            <li><a href="#">Xbox Lice Gold</a></li>
+                            <li><a href="#">Xbox 및 게임</a></li>
+                            <li><a href="#">>PC 게임</a></li>
+                            <li><a href="#">Windows 게임</a></li>
+                        </ul>
+                        <ul class="all_menu_items">
+                            <li class="mobile_menu_item"><a href="#">기업 고객용</a></li>
+                            <li><a href="#">Microsoft Azure</a></li>
+                            <li><a href="#">Microsoft Dynamics 365</a></li>
+                            <li><a href="#">Microsoft 365</a></li>
+                            <li><a href="#">Microsoft Industry</a></li>
+                            <li><a href="#">데이터 플랫폼</a></li>
+                            <li><a href="#">볼륨 라이선싱</a></li>
+                            <li><a href="#">비즈니스 쇼핑</a></li>
+                        </ul>
+                        <ul class="all_menu_items">
+                            <li class="mobile_menu_item"><a href="#">Developer & IT</a></li>
+                            <li><a href="#">.NET</a></li>
+                            <li><a href="#">Visual Studio</a></li>
+                            <li><a href="#">Windows Server</a></li>
+                            <li><a href="#">Windows 앱 개발</a></li>
+                            <li><a href="#">문서</a></li>
+                        </ul>
+                        <ul class="all_menu_items">
+                            <li class="mobile_menu_item"><a href="#">기타</a></li>
+                            <li><a href="#">무료 다운로드 및 보안</a></li>
+                            <li><a href="#">교육</a></li>
+                        </ul>
+                        <div class="sitemap_link_area"><span><a href="#">사이트맵 보기 > </a></span></div>
+                    </div>
+                </div>
+
+                </li>
+                <li class="li_search"><a href="#" class="search_btn "><span class="menu_txt res_txt">검색</span> <i class="fas fa-search"></i>    </a></li>
+                <li><a href="#" class="cart_btn "><span class="menu_txt res_txt">카트</span> <i class="fas fa-shopping-cart"></i></a></li>
+                <li><a href="#" class="login_btn "><span class="res_txt"> 로그인</span> <i class="fas fa-sign-in-alt"></i></a></li>
+            </ul>
+        </header>
+
+        <div class="container">
+            <section class="main_banner">
+                <div class = "bg_img">
+                    <div class="bg_txt">
+                        <h3>Microsof 365 소개</h3>
+                        <p class="main_banner_txt">업무와 생활 전반에 활용할 수 있는 생산성 클라우드입니다.</p>
+                        <ul><li><a href="#">가정용</a></li>
+                            <li><a href="#">비즈니스용</a></li>
+                            <li><a href="#">엔터프라이즈용</a></li>
+                        </ul>
+                        <span class="main_banner_login_txt">기존 고객이신가요? <a class="link_login" href="#">로그인</a></span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="video_info">
+                <h3>혁신적인 Office 앱, 지능형 클라우드 서비스 및 세계적인 수준의 보안으로 더 많은 성과를 내도록 설계되었습니다.</h2>
+                <p>이제 Office 365가 Microsoft 365로 바뀝니다.</p>
+                <div class="video_wrap">
+                    <iframe id="video_iframe" frameborder="0" allowfullscreen="true" src="https://www.microsoft.com/ko-kr/videoplayer/embed/RE4u9NK?autoplay=false&amp;loop=false&amp;mute=false&amp;controls=true&amp;playPauseTrigger=false" title="ko-KR_WASATCH_HP_MASTER_v34"></iframe>
+                </div>
+            </section>
+
+            <section class="detail_info">
+                <div class="detail_wrap">
+                <h3>Microsoft 365에 대한 자세한 정보</h3>
+                    <ul>
+                        <li>
+                            <img src="img/RE4r3A9.png">
+                            <span class="img_title">가정</span>
+                            <a href="#" class="detail_link">자세한 정보 ></a>
+                        </li>
+                        <li>
+                            <img src="img/RE4qVml.png">
+                            <span class="img_title">비즈니스</span>
+                            <a href="#" class="detail_link">자세한 정보 ></a>
+                        </li>
+                        <li>
+                            <img src="img/RE4qVmr.png">
+                            <span class="img_title">엔터프라이즈</span>
+                            <a href="#" class="detail_link">자세한 정보 ></a>
+                        </li>
+                        <li>
+                            <img src="img/RE4r3Ax.png">
+                            <span class="img_title">교육</span>
+                            <a href="#" class="detail_link">자세한 정보 ></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="etc">
+                <div class="etc_wrap">
+                    <span class="ico_txt">Microsoft365 팔로우하기</span>
+                    <a href="#" class="mr10 snsBtn"><i class="fab fa-twitter" style="font-size:20px"></i></a>
+                    <a href="#" class="snsBtn"><i class="fas fa-blog" style="font-size:20px"></i></a>
+                </div>
+                
+            </section>
+
+        </div> <!--//container-->
+
+        <footer>
+            <div class="footer_wrap">
+            <div class="footer_menu">
+            <ul>
+                <li><h3><a href="#">새로운 기능</a></h3></li>
+                <li><a href="#">Microsoft 365</a></li>
+                <li><a href="#">Surface Pro X</a></li>
+                <li><a href="#">Surface Pro 7</a></li>
+                <li><a href="#">Surface Laptop 3</a></li>
+                <li><a href="#">Surface Go</a></li>
+                <li><a href="#">Windows 10 앱(238K)</a></li>
+            </ul>
+            <ul>
+                <li><h3><a href="#">Microsoft Store</a></h3></li>
+                <li><a href="#">계정 프로필</a></li>
+                <li><a href="#">다운로드 센터</a></li>
+                <li><a href="#">Microsoft Store 지원</a></li>
+                <li><a href="#">반품/환불</a></li>
+                <li><a href="#">주문 추적</a></li>
+            </ul>
+            <ul>
+                <li><h3><a href="#">교육</a></h3></li>
+                <li><a href="#">교육 분야의 Microsoft</a></li>
+                <li><a href="#">학생용 Office</a></li>
+                <li><a href="#">학교용 Office 365</a></li>
+                <li><a href="#">학생 및 학부모용 특가 혜택</a></li>
+                <li><a href="#">교육 분야의 Microsoft Azure</a></li>
+            </ul>
+            <ul>
+                <li><h3><a href="#">대기업</a></h3></li>
+                <li><a href="#">Azure</a></li>
+                <li><a href="#">자동차</a></li>
+                <li><a href="#">정부 기관</a></li>
+                <li><a href="#">의료 서비스</a></li>
+                <li><a href="#">제조업</a></li>
+                <li><a href="#">금융 서비스</a></li>
+                <li><a href="#">소매</a></li>
+            </ul>
+            <ul>
+                <li><h3><a href="#">Microsof Store</a></h3></li>
+                <li><a href="#">계정 프로필</a></li>
+                <li><a href="#">다운로드 센터</a></li>
+                <li><a href="#">Microsoft Store 지원</a></li>
+                <li><a href="#">반품/환불</a></li>
+                <li><a href="#">주문 추적</a></li>
+            </ul>
+            <ul>
+                <li><h3><a href="#">교육</a></h3></li>
+                <li><a href="#">교육 분야의 Microsoft</a></li>
+                <li><a href="#">학생용 Office</a></li>
+                <li><a href="#">학교용 Office 365</a></li>
+                <li><a href="#">학생 및 학부모용 특가 혜택</a></li>
+                <li><a href="#">교육 분야의 Microsoft Azure</a></li>
+            </ul>
+            </div>
+
+            <div class="site_info">
+                <div class="site_lang">한국어(대한민국)</div>
+                <ul class="ms_corp_nav">
+                    <li><a href="#">Microsoft에 문의</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">사용약관</a></li>
+                    <li><a href="#">상표</a></li>
+                    <li><a href="#">광고 정보</a></li>
+                    <li>© Microsoft 2020</li>   
+                </ul>
+            </div>
+        </div>
+        </footer>
+    </div>
+</body>
+</html>

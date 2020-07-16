@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+body {margin: 0;
+    font-style: normal;
+}
+
+a {text-decoration:none;color: black;}
+h3 {font-size: 2rem;}
+
+/* 헤더 */
+.headlist{
+    background-color: #313955;
+    transition: all 1s;
+}
+.headlist_white{
+    background-color: #fff !important;
+}
+
+.logo {
+    float: left;
+    text-indent:-99999px;
+    background-image: url(../img/img-kabang-200417.png);
+    width: 120px;
+    height: 30px;
+    background-position: 0px 0px;
+    margin : 30px 0 0 0;
+}
+
+.logo_black{
+    background-position: 0px -25px;
+}
+
+nav .menu > .menuitem > a{
+    color: #fff;
+    transition: all 1s;
+}
+
+nav .menu > .menuitem .btn_submit{
+    color: #000;
+}
+
+nav .menu .menuitem:hover{
+    border-bottom: 2px solid #fff;
+}
+
+
+nav .menu .menuitem.underline{
+    border-bottom: 2px solid #fff;
+}
+
+.titlle_item{
+    color: #fff;
+}
+.blk_underline{
+    border-bottom: 2px solid #000 !important;
+}
+.blk_bd:hover{
+    border-bottom: 2px solid #000 !important;
+}
+
+/* ---헤더 */
+
+#contanier{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.content_wrap{
+    width: 1120px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.content_wrap h3{
+    font-size: 1.8rem;
+    border-bottom: 1px solid gray;
+    padding: 30px 0;
+}
+
+.content_wrap .offic_info{
+    margin-top: 50px;
+    height:540px;
+}
+
+.offic_info h4{
+    margin: 80px 0 30px 0;
+    font-size: 1.3rem;
+}
+
+.offic_info .address_label, .address {
+    display: inline-block
+}
+
+.offic_info .tel_label, .tel {
+    display: inline-block;
+}
+
+.offic_info .address, .tel{
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.offic_info .address_label, .tel_label{
+    margin-right: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.offic_info .map{
+    width:1100px;
+    height:400px;
+    position: relative;
+    top: 30px;
+}
+
+.offic_info .map .marker_label{
+    background-color: white;
+    border: 1px solid black;
+    padding:5px;
+    border-radius: 10px;
+    top: -70px;
+    position: relative;
+    font-size: 0.8rem;
+}
